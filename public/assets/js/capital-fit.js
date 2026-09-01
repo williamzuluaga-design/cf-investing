@@ -3,10 +3,12 @@
   const isEs = document.documentElement.lang === 'es';
   const copy = isEs ? {
     choose:'Seleccionar…', results:'Resultados de compatibilidad', score:'Compatibilidad informativa', ticket:'Ticket', instruments:'Instrumentos', focus:'Enfoques', targets:'Instituciones objetivo', reasons:'Coincidencias', gaps:'Aspectos por validar', website:'Sitio oficial', none:'Seleccione al menos un criterio para explorar compatibilidad.', noresults:'No se encontraron fondeadores compatibles con los criterios seleccionados.', readiness:'Áreas de preparación completadas', caution:'Este puntaje compara únicamente campos del mapeo. No estima probabilidad de aprobación, elegibilidad definitiva ni condiciones vigentes.', source:'Fuente: Mapeo de Fondeadores de Impacto para Instituciones Microfinancieras en Colombia',
+    prefilled:'Criterios precargados desde un perfil de Project Intelligence. Revise y ajuste los supuestos antes de interpretar los resultados.',
     rInst:'Tipo de institución compatible', rNeed:'Ofrece al menos un instrumento asociado con la necesidad seleccionada', rFocus:'Prioridad de impacto compatible', rTicket:'El monto indicado está dentro del rango publicado', rCurrency:'Moneda publicada compatible',
     gInst:'El tipo de institución no aparece entre los objetivos publicados', gNeed:'No aparece un instrumento asociado con la necesidad seleccionada', gFocus:'El enfoque seleccionado no aparece entre las prioridades publicadas', gTicket:'El monto queda fuera del rango publicado o requiere validación', gCurrency:'La moneda seleccionada no aparece en la ficha publicada'
   } : {
     choose:'Choose…', results:'Compatibility results', score:'Informational compatibility', ticket:'Ticket', instruments:'Instruments', focus:'Focus', targets:'Target institutions', reasons:'Matches', gaps:'Items to validate', website:'Official website', none:'Select at least one criterion to explore compatibility.', noresults:'No funders match the selected criteria.', readiness:'Readiness areas completed', caution:'This score only compares fields in the source mapping. It does not estimate approval probability, definitive eligibility or current terms.', source:'Source: Mapeo de Fondeadores de Impacto para Instituciones Microfinancieras en Colombia',
+    prefilled:'Criteria were prefilled from a Project Intelligence profile. Review and adjust the assumptions before interpreting the results.',
     rInst:'Institution type appears compatible', rNeed:'Offers at least one instrument associated with the selected need', rFocus:'Impact priority appears compatible', rTicket:'Requested amount falls within the published range', rCurrency:'Published currency appears compatible',
     gInst:'Institution type is not listed among published targets', gNeed:'No instrument associated with the selected need appears in the profile', gFocus:'Selected focus does not appear among published priorities', gTicket:'Amount falls outside the published range or requires validation', gCurrency:'Selected currency does not appear in the published profile'
   };
@@ -27,6 +29,22 @@
 
   function uniqueFlat(key){return [...new Set(funders.flatMap(f=>f[key]||[]).filter(Boolean))].sort((a,b)=>a.localeCompare(b));}
   function fillSelect(id, values){const el=$(id); if(!el)return; values.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=tr(v);el.appendChild(o);});}
+  function setSelectIfAvailable(id,value){const el=$(id);if(!el||!value)return false;const ok=[...el.options].some(o=>o.value===value);if(ok)el.value=value;return ok;}
+  function applyPrefill(){
+    const params=new URLSearchParams(location.search);
+    const fromProject=params.get('project');
+    let used=false;
+    used=setSelectIfAvailable('institution',params.get('institution'))||used;
+    used=setSelectIfAvailable('need',params.get('need'))||used;
+    used=setSelectIfAvailable('focus',params.get('focus'))||used;
+    used=setSelectIfAvailable('currency',params.get('currency'))||used;
+    const amount=params.get('amount');
+    if(amount && $('amount') && Number.isFinite(Number(amount))){$('amount').value=amount;used=true;}
+    if(fromProject && used){
+      const form=document.querySelector('.fit-form');
+      if(form){const n=document.createElement('div');n.className='notice';n.innerHTML=`<strong>${esc(copy.prefilled)}</strong><br><span>${esc(fromProject)}</span>`;form.insertAdjacentElement('beforebegin',n);}
+    }
+  }
   function amountFits(f, amount){
     if(!Number.isFinite(amount)) return null;
     if(f.ticket_min_usd !== null && amount < f.ticket_min_usd) return false;
@@ -71,6 +89,7 @@
     funders=data.funders||[];
     fillSelect('institution',uniqueFlat('target_institutions'));
     fillSelect('focus',uniqueFlat('focus'));
+    applyPrefill();
     ['institution','need','focus','amount','currency'].forEach(id=>$(id)?.addEventListener('input',render));
     document.querySelectorAll('[data-readiness]').forEach(x=>x.addEventListener('change',readiness));
     readiness();render();
