@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install trusted CA bundle
+        run: python -m pip install --disable-pip-version-check certifi
+
       - name: Check registered primary sources
         id: monitor
         run: python scripts/check_sources.py
