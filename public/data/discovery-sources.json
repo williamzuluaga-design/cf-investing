@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated_at": "2026-08-31",
   "policy": "Discovery identifies candidate records only. No candidate is published to Project Intelligence without human review of the primary source.",
   "sources": [
@@ -19,33 +19,40 @@
       "include_path_prefixes": ["/es/proyectos/", "/en/projects/"],
       "max_candidates_per_run": 60,
       "notes": "Primary connector uses BID Invest's official XML project database. The public catalogue remains available as fallback. Initial review scope prioritizes Colombia and Regional records published in 2026 to control review noise.",
-      "rights_note": "The BID Invest projects page states that, unless otherwise indicated, content in the section is available under Creative Commons Attribution 3.0 IGO. CF Investing stores selected discovery metadata and links back to the primary source."
+      "rights_note": "CF Investing stores selected discovery metadata and links back to the primary source."
     },
     {
       "id": "caf-projects",
       "name": "CAF projects",
       "organization": "CAF",
       "url": "https://www.caf.com/es/quienes-somos/proyectos/",
-      "connector": "html_catalog",
+      "connector": "caf_catalog",
+      "fallback_connector": "html_catalog",
       "candidate_kind": "project_or_program",
       "enabled": true,
       "frequency": "weekly",
+      "country_scope": ["Colombia"],
+      "published_since": "2025-01-01",
       "include_path_prefixes": ["/es/quienes-somos/proyectos/", "/es/proyectos/"],
-      "max_candidates_per_run": 30,
-      "notes": "Official CAF project catalogue. Candidate links still require review for geography, instrument and relevance to CF Investing. A source-specific structured connector remains a future improvement."
+      "max_pages": 6,
+      "max_candidates_per_run": 60,
+      "notes": "Source-specific CAF connector extracts operation number, country, approval/update date, risk type, financing instrument and sector from the official project catalogue when those fields are visible. Human review remains mandatory."
     },
     {
       "id": "bancoldex-credit-lines",
       "name": "Bancóldex credit lines",
       "organization": "Bancóldex",
       "url": "https://www.bancoldex.com/lineas-de-credito",
-      "connector": "html_catalog",
+      "connector": "bancoldex_catalog",
+      "fallback_connector": "html_catalog",
       "candidate_kind": "financing_program",
       "enabled": true,
       "frequency": "weekly",
+      "published_since": "2026-01-01",
       "include_path_prefixes": ["/credito-traves-de-aliados/", "/credito-directo/"],
-      "max_candidates_per_run": 30,
-      "notes": "Official financing-program listing. Discovery treats credit facilities as financing records, not as investable projects. A source-specific field extractor can be added after the structured BID Invest connector is validated."
+      "max_pages": 5,
+      "max_candidates_per_run": 80,
+      "notes": "Source-specific Bancóldex connector normalizes program date, available facility, company size, use of proceeds, sector and geographic coverage from the official credit-line catalogue. Financing facilities are not treated as investable projects."
     },
     {
       "id": "ifc-disclosures",
