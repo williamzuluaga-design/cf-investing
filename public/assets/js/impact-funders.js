@@ -10,6 +10,15 @@
   let funders = [];
   const filters = ['instrumentFilter','focusFilter','institutionFilter','ticketFilter'];
 
+  const heroActions=document.querySelector('.hero .actions');
+  if(heroActions){
+    const fit=document.createElement('a');
+    fit.className='button secondary';
+    fit.href=isEs?'/es/finanzas-sostenibles/financiamiento-impacto/compatibilidad-capital/':'/sustainable-finance/impact-finance/capital-fit/';
+    fit.textContent=isEs?'Explorar compatibilidad de capital':'Explore capital fit';
+    heroActions.appendChild(fit);
+  }
+
   function uniqueFlat(key){
     return [...new Set(funders.flatMap(f => f[key] || []).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   }
