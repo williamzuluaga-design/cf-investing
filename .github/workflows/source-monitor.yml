@@ -1,0 +1,53 @@
+name: Project source monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 13 * * *"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: project-source-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check registered primary sources
+        id: monitor
+        run: python scripts/check_sources.py
+
+      - name: Commit monitoring state when it changes
+        run: |
+          if git diff --quiet -- public/data/source-monitor.json; then
+            echo "No monitoring-state change to commit."
+            exit 0
+          fi
+          git config user.name "cf-investing-source-monitor"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/source-monitor.json
+          git commit -m "Update project source monitoring state"
+          git push
+
+      - name: Create human-review issue when source content changes
+        if: steps.monitor.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Project source review queue — $(date -u +%Y-%m-%d)" \
+            --body-file /tmp/source-monitor-review.md
