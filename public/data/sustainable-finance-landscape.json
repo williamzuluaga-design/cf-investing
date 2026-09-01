@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-31",
+  "scope": "Global climate-finance context plus a Colombia-oriented capital-system map",
+  "method_note": "Global KPI values are source-derived. Sankey link weights are qualitative visual-emphasis weights for the financing system and are not measured monetary flows.",
+  "global_snapshot": [
+    {
+      "label": "Global climate finance",
+      "value": "> US$2T",
+      "period": "2024",
+      "note": "Climate finance surpassed US$2 trillion for the first time in 2024.",
+      "source_id": "cpi-glcf-2026"
+    },
+    {
+      "label": "Estimated global climate finance",
+      "value": "US$2.1T",
+      "period": "2025 estimate",
+      "note": "CPI estimates global climate finance reached approximately US$2.1 trillion in 2025.",
+      "source_id": "cpi-glcf-2026"
+    },
+    {
+      "label": "Mitigation finance",
+      "value": "US$1.9T",
+      "period": "2024",
+      "note": "Mitigation remained the dominant climate-finance use in 2024.",
+      "source_id": "cpi-glcf-2026"
+    },
+    {
+      "label": "Adaptation finance",
+      "value": "US$64B",
+      "period": "2024",
+      "note": "Tracked adaptation investment plateaued at approximately US$64 billion in 2024.",
+      "source_id": "cpi-glcf-2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cpi-glcf-2026",
+      "name": "Climate Policy Initiative — Global Landscape of Climate Finance 2026",
+      "url": "https://glcf.climatepolicyinitiative.org/",
+      "as_of": "2026-06-23"
+    },
+    {
+      "id": "sfc-sustainable-finance",
+      "name": "Superintendencia Financiera de Colombia — Finanzas Sostenibles",
+      "url": "https://www.superfinanciera.gov.co/publicaciones/10104520/industrias-supervisadasfinanzas-sostenibles-10104520/",
+      "as_of": "2026-07-17"
+    },
+    {
+      "id": "mfsc",
+      "name": "Mesa de Finanzas Sostenibles de Colombia",
+      "url": "https://www.mfscolombia.com/",
+      "as_of": "2026-08-31"
+    },
+    {
+      "id": "cfs-uniandes",
+      "name": "Centro Regional de Finanzas Sostenibles — Universidad de los Andes",
+      "url": "https://cfs.uniandes.edu.co/",
+      "as_of": "2026-08-31"
+    }
+  ],
+  "columns": [
+    {"id":"capital-sources","label":"Sources of capital"},
+    {"id":"intermediaries","label":"Intermediaries & enablers"},
+    {"id":"instruments","label":"Financial instruments"},
+    {"id":"capital-demand","label":"Institutions & projects"}
+  ],
+  "nodes": [
+    {"id":"institutional-investors","column":"capital-sources","label":"Institutional & private investors","description":"Asset owners, funds and private capital seeking risk-adjusted opportunities."},
+    {"id":"development-capital","column":"capital-sources","label":"Development finance","description":"Multilateral, bilateral and national development capital."},
+    {"id":"public-climate-capital","column":"capital-sources","label":"Public & climate funds","description":"Public budgets, climate funds and policy-linked resources."},
+    {"id":"concessional-capital","column":"capital-sources","label":"Concessional & philanthropic capital","description":"Grants, catalytic resources and below-market capital used selectively."},
+
+    {"id":"banks-dfis","column":"intermediaries","label":"Banks & development banks","description":"Originate, intermediate and structure credit."},
+    {"id":"funds-managers","column":"intermediaries","label":"Funds & asset managers","description":"Aggregate capital into strategies and vehicles."},
+    {"id":"guarantee-providers","column":"intermediaries","label":"Guarantee & risk providers","description":"Reduce selected credit, political, performance or market risks."},
+    {"id":"capital-markets","column":"intermediaries","label":"Capital-market infrastructure","description":"Issuers, arrangers, exchanges and market vehicles."},
+
+    {"id":"senior-debt","column":"instruments","label":"Loans & senior debt","description":"Loans, credit lines and project/corporate debt."},
+    {"id":"subordinated-equity","column":"instruments","label":"Subordinated debt & equity","description":"Risk capital and capital-strengthening instruments."},
+    {"id":"thematic-markets","column":"instruments","label":"Green / thematic instruments","description":"Green bonds and other labelled debt structures."},
+    {"id":"guarantees-blended","column":"instruments","label":"Guarantees & catalytic structures","description":"Risk-sharing, concessional layers and blended structures."},
+    {"id":"technical-assistance","column":"instruments","label":"Technical assistance & grants","description":"Project preparation, institutional strengthening and impact measurement."},
+
+    {"id":"energy-infrastructure","column":"capital-demand","label":"Energy & infrastructure","description":"Renewable energy, grids, transport, water and resilient infrastructure."},
+    {"id":"financial-institutions","column":"capital-demand","label":"Financial institutions","description":"Banks, microfinance institutions, cooperatives and fintech-enabled channels."},
+    {"id":"productive-sector","column":"capital-demand","label":"SMEs & productive transition","description":"Productivity, cleaner production, digitalization and transition investments."},
+    {"id":"nature-agriculture","column":"capital-demand","label":"Agriculture, nature & rural economy","description":"Sustainable agriculture, biodiversity and rural resilience."},
+    {"id":"social-resilience","column":"capital-demand","label":"Social & climate resilience","description":"Health, education, adaptation and resilience-oriented programs."}
+  ],
+  "links": [
+    {"source":"institutional-investors","target":"funds-managers","weight":5},
+    {"source":"institutional-investors","target":"capital-markets","weight":4},
+    {"source":"development-capital","target":"banks-dfis","weight":5},
+    {"source":"development-capital","target":"funds-managers","weight":3},
+    {"source":"public-climate-capital","target":"banks-dfis","weight":3},
+    {"source":"public-climate-capital","target":"guarantee-providers","weight":4},
+    {"source":"concessional-capital","target":"guarantee-providers","weight":4},
+    {"source":"concessional-capital","target":"funds-managers","weight":2},
+
+    {"source":"banks-dfis","target":"senior-debt","weight":5},
+    {"source":"banks-dfis","target":"subordinated-equity","weight":2},
+    {"source":"funds-managers","target":"subordinated-equity","weight":4},
+    {"source":"funds-managers","target":"senior-debt","weight":3},
+    {"source":"guarantee-providers","target":"guarantees-blended","weight":5},
+    {"source":"capital-markets","target":"thematic-markets","weight":5},
+    {"source":"public-climate-capital","target":"technical-assistance","weight":3},
+    {"source":"concessional-capital","target":"technical-assistance","weight":4},
+
+    {"source":"senior-debt","target":"energy-infrastructure","weight":5},
+    {"source":"senior-debt","target":"financial-institutions","weight":5},
+    {"source":"senior-debt","target":"productive-sector","weight":4},
+    {"source":"subordinated-equity","target":"financial-institutions","weight":3},
+    {"source":"subordinated-equity","target":"productive-sector","weight":3},
+    {"source":"thematic-markets","target":"energy-infrastructure","weight":4},
+    {"source":"thematic-markets","target":"social-resilience","weight":2},
+    {"source":"guarantees-blended","target":"nature-agriculture","weight":4},
+    {"source":"guarantees-blended","target":"energy-infrastructure","weight":3},
+    {"source":"guarantees-blended","target":"productive-sector","weight":3},
+    {"source":"technical-assistance","target":"nature-agriculture","weight":3},
+    {"source":"technical-assistance","target":"social-resilience","weight":4},
+    {"source":"technical-assistance","target":"financial-institutions","weight":3}
+  ]
+}
