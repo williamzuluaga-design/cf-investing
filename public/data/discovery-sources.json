@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-31",
+  "policy": "Discovery identifies candidate records only. No candidate is published to Project Intelligence without human review of the primary source.",
+  "sources": [
+    {
+      "id": "idb-invest-projects",
+      "name": "BID Invest projects",
+      "organization": "BID Invest",
+      "url": "https://idbinvest.org/es/proyectos",
+      "candidate_kind": "project_or_financing",
+      "enabled": true,
+      "frequency": "weekly",
+      "include_path_prefixes": ["/es/proyectos/"],
+      "max_candidates_per_run": 30,
+      "notes": "Official project disclosure catalogue. BID Invest also provides a downloadable project database; a future source-specific connector may use that structured source instead of HTML discovery."
+    },
+    {
+      "id": "caf-projects",
+      "name": "CAF projects",
+      "organization": "CAF",
+      "url": "https://www.caf.com/es/quienes-somos/proyectos/",
+      "candidate_kind": "project_or_program",
+      "enabled": true,
+      "frequency": "weekly",
+      "include_path_prefixes": ["/es/quienes-somos/proyectos/", "/es/proyectos/"],
+      "max_candidates_per_run": 30,
+      "notes": "Official CAF project catalogue. Candidate links still require review for geography, instrument and relevance to CF Investing."
+    },
+    {
+      "id": "bancoldex-credit-lines",
+      "name": "Bancóldex credit lines",
+      "organization": "Bancóldex",
+      "url": "https://www.bancoldex.com/lineas-de-credito",
+      "candidate_kind": "financing_program",
+      "enabled": true,
+      "frequency": "weekly",
+      "include_path_prefixes": ["/credito-traves-de-aliados/", "/credito-directo/"],
+      "max_candidates_per_run": 30,
+      "notes": "Official financing-program listing. Discovery should treat credit facilities as financing records, not as investable projects."
+    },
+    {
+      "id": "ifc-disclosures",
+      "name": "IFC Disclosure Portal",
+      "organization": "IFC",
+      "url": "https://disclosures.ifc.org/project-disclosures",
+      "candidate_kind": "project_or_advisory",
+      "enabled": false,
+      "frequency": "source-specific",
+      "include_path_prefixes": ["/project-detail/"],
+      "max_candidates_per_run": 30,
+      "notes": "Registered for a later source-specific integration because the public portal uses dynamic search and supports its own disclosure-notification subscriptions."
+    },
+    {
+      "id": "findeter-financing",
+      "name": "Findeter financing programs",
+      "organization": "Findeter",
+      "url": "https://www.findeter.gov.co/productos-y-servicios/lineas-de-credito-de-redescuento",
+      "candidate_kind": "financing_program",
+      "enabled": false,
+      "frequency": "source-specific",
+      "include_path_prefixes": ["/productos-y-servicios/"],
+      "max_candidates_per_run": 30,
+      "notes": "Registered for later integration after defining whether the Project Explorer should ingest program-level financing records, individual financed projects, or both."
+    }
+  ]
+}
