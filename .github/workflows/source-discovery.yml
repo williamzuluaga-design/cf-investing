@@ -27,9 +27,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install trusted CA bundle
+        run: python -m pip install --disable-pip-version-check certifi
+
       - name: Discover candidates from registered official sources
         id: discovery
-        run: python scripts/discover_sources_v2.py
+        run: SSL_CERT_FILE="$(python -m certifi)" python scripts/discover_sources_v2.py
 
       - name: Commit discovery queue when it changes
         run: |
