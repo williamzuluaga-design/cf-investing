@@ -29,7 +29,7 @@ jobs:
 
       - name: Discover candidates from registered official sources
         id: discovery
-        run: python scripts/discover_sources.py
+        run: python scripts/discover_sources_v2.py
 
       - name: Commit discovery queue when it changes
         run: |
