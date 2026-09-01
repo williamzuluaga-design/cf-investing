@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated_at": "2026-08-31",
   "policy": "Discovery identifies candidate records only. No candidate is published to Project Intelligence without human review of the primary source.",
   "sources": [
@@ -8,42 +8,51 @@
       "name": "BID Invest projects",
       "organization": "BID Invest",
       "url": "https://idbinvest.org/es/proyectos",
+      "structured_url": "https://idbinvest.org/en/projects.xml",
+      "connector": "idbinvest_xml",
+      "fallback_connector": "html_catalog",
       "candidate_kind": "project_or_financing",
       "enabled": true,
       "frequency": "weekly",
-      "include_path_prefixes": ["/es/proyectos/"],
-      "max_candidates_per_run": 30,
-      "notes": "Official project disclosure catalogue. BID Invest also provides a downloadable project database; a future source-specific connector may use that structured source instead of HTML discovery."
+      "country_scope": ["Colombia", "Regional"],
+      "published_since": "2026-01-01",
+      "include_path_prefixes": ["/es/proyectos/", "/en/projects/"],
+      "max_candidates_per_run": 60,
+      "notes": "Primary connector uses BID Invest's official XML project database. The public catalogue remains available as fallback. Initial review scope prioritizes Colombia and Regional records published in 2026 to control review noise.",
+      "rights_note": "The BID Invest projects page states that, unless otherwise indicated, content in the section is available under Creative Commons Attribution 3.0 IGO. CF Investing stores selected discovery metadata and links back to the primary source."
     },
     {
       "id": "caf-projects",
       "name": "CAF projects",
       "organization": "CAF",
       "url": "https://www.caf.com/es/quienes-somos/proyectos/",
+      "connector": "html_catalog",
       "candidate_kind": "project_or_program",
       "enabled": true,
       "frequency": "weekly",
       "include_path_prefixes": ["/es/quienes-somos/proyectos/", "/es/proyectos/"],
       "max_candidates_per_run": 30,
-      "notes": "Official CAF project catalogue. Candidate links still require review for geography, instrument and relevance to CF Investing."
+      "notes": "Official CAF project catalogue. Candidate links still require review for geography, instrument and relevance to CF Investing. A source-specific structured connector remains a future improvement."
     },
     {
       "id": "bancoldex-credit-lines",
       "name": "Bancóldex credit lines",
       "organization": "Bancóldex",
       "url": "https://www.bancoldex.com/lineas-de-credito",
+      "connector": "html_catalog",
       "candidate_kind": "financing_program",
       "enabled": true,
       "frequency": "weekly",
       "include_path_prefixes": ["/credito-traves-de-aliados/", "/credito-directo/"],
       "max_candidates_per_run": 30,
-      "notes": "Official financing-program listing. Discovery should treat credit facilities as financing records, not as investable projects."
+      "notes": "Official financing-program listing. Discovery treats credit facilities as financing records, not as investable projects. A source-specific field extractor can be added after the structured BID Invest connector is validated."
     },
     {
       "id": "ifc-disclosures",
       "name": "IFC Disclosure Portal",
       "organization": "IFC",
       "url": "https://disclosures.ifc.org/project-disclosures",
+      "connector": "source_specific_pending",
       "candidate_kind": "project_or_advisory",
       "enabled": false,
       "frequency": "source-specific",
@@ -56,6 +65,7 @@
       "name": "Findeter financing programs",
       "organization": "Findeter",
       "url": "https://www.findeter.gov.co/productos-y-servicios/lineas-de-credito-de-redescuento",
+      "connector": "source_specific_pending",
       "candidate_kind": "financing_program",
       "enabled": false,
       "frequency": "source-specific",
