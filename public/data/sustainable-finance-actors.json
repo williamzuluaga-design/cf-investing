@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-31",
+  "scope": "Selected organizations relevant to Colombia's sustainable-finance ecosystem. This is an analytical directory, not an exhaustive membership list or endorsement.",
+  "actors": [
+    {
+      "id":"sfc",
+      "name":"Superintendencia Financiera de Colombia",
+      "actor_type":"Public authority",
+      "role":"Regulation & supervision",
+      "geography":"Colombia",
+      "focus":["Sustainable finance","Climate risk","ESG risk","Green taxonomy"],
+      "description":"Financial supervisor with a strategic agenda covering green finance and environmental and climate-risk management.",
+      "website":"https://www.superfinanciera.gov.co/publicaciones/10104520/industrias-supervisadasfinanzas-sostenibles-10104520/",
+      "source":"SFC sustainable-finance portal"
+    },
+    {
+      "id":"mfsc",
+      "name":"Mesa de Finanzas Sostenibles de Colombia",
+      "actor_type":"Coordination platform",
+      "role":"Ecosystem coordination",
+      "geography":"Colombia",
+      "focus":["Sustainable finance","ESG integration","Climate mitigation","Climate adaptation"],
+      "description":"Collaboration platform connecting financial-system actors, national authorities and international partners to strengthen sustainable-finance practices.",
+      "website":"https://www.mfscolombia.com/",
+      "source":"MFSC official site"
+    },
+    {
+      "id":"cfs-uniandes",
+      "name":"Centro Regional de Finanzas Sostenibles — Universidad de los Andes",
+      "actor_type":"Research & knowledge",
+      "role":"Research, training & convening",
+      "geography":"Colombia / Latin America",
+      "focus":["Sustainable finance","Impact investing","Climate finance","Research"],
+      "description":"Academic center connecting research, public and private actors to scale sustainable-finance practice in Latin America.",
+      "website":"https://cfs.uniandes.edu.co/",
+      "source":"CFS official site"
+    },
+    {
+      "id":"bancoldex",
+      "name":"Bancóldex",
+      "actor_type":"National development bank",
+      "role":"Intermediation & enterprise finance",
+      "geography":"Colombia",
+      "focus":["SMEs","Productivity","Modernization","Inclusive finance","Sustainability"],
+      "description":"Development-finance institution providing business credit lines and programs through direct and intermediated channels.",
+      "website":"https://www.bancoldex.com/lineas-de-credito",
+      "source":"Bancóldex official credit-line catalogue"
+    },
+    {
+      "id":"findeter",
+      "name":"Findeter",
+      "actor_type":"National development bank",
+      "role":"Territorial project finance",
+      "geography":"Colombia",
+      "focus":["Sustainable infrastructure","Territorial development","Climate adaptation","Energy transition"],
+      "description":"Development bank supporting territorial planning, structuring, financing and execution of sustainable projects.",
+      "website":"https://www.findeter.gov.co/",
+      "source":"Findeter official site"
+    },
+    {
+      "id":"caf",
+      "name":"CAF — Development Bank of Latin America and the Caribbean",
+      "actor_type":"Multilateral development bank",
+      "role":"Development finance",
+      "geography":"Latin America & Caribbean",
+      "focus":["Infrastructure","Climate action","Social development","Financial sector","Regional integration"],
+      "description":"Regional development bank financing public and private-sector projects and programs across Latin America and the Caribbean.",
+      "website":"https://www.caf.com/es/quienes-somos/proyectos/",
+      "source":"CAF official project catalogue"
+    },
+    {
+      "id":"idb-invest",
+      "name":"BID Invest",
+      "actor_type":"Multilateral development finance",
+      "role":"Private-sector development finance",
+      "geography":"Latin America & Caribbean",
+      "focus":["Private sector","Infrastructure","Financial institutions","Climate finance","Impact"],
+      "description":"Private-sector arm of the IDB Group financing companies, financial institutions and infrastructure projects.",
+      "website":"https://idbinvest.org/es/proyectos",
+      "source":"BID Invest official projects portal"
+    },
+    {
+      "id":"ifc",
+      "name":"International Finance Corporation (IFC)",
+      "actor_type":"Multilateral development finance",
+      "role":"Private-sector investment & advisory",
+      "geography":"Global / Colombia",
+      "focus":["Private sector","Climate finance","Financial institutions","Infrastructure","Advisory"],
+      "description":"World Bank Group institution focused on private-sector investment and advisory in emerging markets.",
+      "website":"https://disclosures.ifc.org/project-disclosures",
+      "source":"IFC Disclosure Portal"
+    },
+    {
+      "id":"asobancaria",
+      "name":"Asobancaria",
+      "actor_type":"Industry association",
+      "role":"Financial-sector coordination & knowledge",
+      "geography":"Colombia",
+      "focus":["Banking","Sustainable finance","Biodiversity finance","Blended finance"],
+      "description":"Banking-sector association active in sustainable-finance dialogue, capacity building and industry initiatives.",
+      "website":"https://www.asobancaria.com/",
+      "source":"Public industry role and sustainable-finance initiatives"
+    },
+    {
+      "id":"bvc",
+      "name":"Bolsa de Valores de Colombia",
+      "actor_type":"Capital-market infrastructure",
+      "role":"Capital markets",
+      "geography":"Colombia",
+      "focus":["Capital markets","Thematic debt","Issuers","Investors"],
+      "description":"Capital-market infrastructure relevant to issuance, secondary markets and thematic financing instruments.",
+      "website":"https://www.bvc.com.co/",
+      "source":"BVC official site"
+    },
+    {
+      "id":"gggi-colombia",
+      "name":"Global Green Growth Institute (GGGI) — Colombia",
+      "actor_type":"International cooperation",
+      "role":"Capacity building & green growth",
+      "geography":"Colombia / International",
+      "focus":["Green finance","Climate risk","Capacity building","Green growth"],
+      "description":"International organization supporting green-growth and sustainable-finance capacity initiatives in Colombia.",
+      "website":"https://gggi.org/country/colombia/",
+      "source":"Public sustainable-finance capacity initiatives with Colombian authorities"
+    }
+  ]
+}
