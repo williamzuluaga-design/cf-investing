@@ -18,11 +18,16 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+try:
+    import certifi
+except ImportError:  # Local/manual runs can still use the platform trust store.
+    certifi = None
+
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "public" / "data" / "source-registry.json"
 STATE_PATH = ROOT / "public" / "data" / "source-monitor.json"
 REVIEW_PATH = Path("/tmp/source-monitor-review.md")
-USER_AGENT = "CFInvesting-SourceMonitor/1.0 (+https://cfinvesting.com/projects/methodology/)"
+USER_AGENT = "CFInvesting-SourceMonitor/1.1 (+https://cfinvesting.com/projects/methodology/)"
 TIMEOUT = 25
 
 
@@ -49,14 +54,25 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
+def tls_context() -> ssl.SSLContext:
+    """Return a verification-enabled TLS context.
+
+    GitHub Actions installs certifi so sources with certificate chains that are not
+    resolved by the runner's default trust store can still be verified safely.
+    Certificate verification is never disabled.
+    """
+    if certifi is not None:
+        return ssl.create_default_context(cafile=certifi.where())
+    return ssl.create_default_context()
+
+
 def normalized_text(payload: bytes, content_type: str) -> str:
     text = payload.decode("utf-8", errors="replace")
     if "html" in content_type.lower() or "<html" in text[:1000].lower():
         parser = VisibleTextParser()
         parser.feed(text)
         text = " ".join(parser.parts)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def digest(text: str) -> str:
@@ -83,12 +99,12 @@ def fetch_source(source: dict, previous: dict) -> dict:
 
     req = Request(source["url"], headers=headers, method="GET")
     try:
-        context = ssl.create_default_context()
-        with urlopen(req, timeout=TIMEOUT, context=context) as response:
+        with urlopen(req, timeout=TIMEOUT, context=tls_context()) as response:
             payload = response.read()
             status_code = getattr(response, "status", 200)
             content_type = response.headers.get("Content-Type", "")
-            current_hash = digest(normalized_text(payload, content_type))
+            text = normalized_text(payload, content_type)
+            current_hash = digest(text)
             old_hash = previous.get("content_sha256")
             baseline = not bool(old_hash)
             changed = bool(old_hash and old_hash != current_hash)
@@ -102,7 +118,7 @@ def fetch_source(source: dict, previous: dict) -> dict:
                 "etag": response.headers.get("ETag"),
                 "last_modified": response.headers.get("Last-Modified"),
                 "content_sha256": current_hash,
-                "normalized_text_length": len(normalized_text(payload, content_type)),
+                "normalized_text_length": len(text),
                 "error": None,
             }
     except HTTPError as exc:
