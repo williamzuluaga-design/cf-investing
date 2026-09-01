@@ -2,37 +2,54 @@
 
 **Capital, Finance & Investment Intelligence**
 
-Public web platform for applied financial research, markets, sustainable finance, investment projects, decision tools and educational experiences.
+Public web platform for applied financial research, markets, sustainable finance, project intelligence, decision tools and educational experiences.
 
 ## Brand architecture
 
-CF is intentionally broad and can support four core finance lenses:
+CF supports four core finance lenses:
 
 - **Corporate Finance** — value, funding and financial decisions.
 - **Climate Finance** — capital for transition and resilience.
-- **Catalytic Finance** — blended structures that mobilize private capital.
-- **Capital Formation** — turning opportunities into financeable projects.
+- **Catalytic Finance** — risk-sharing structures that can mobilize additional capital.
+- **Capital Formation** — turning opportunities into better-prepared, financeable projects.
 
-## Initial site structure
+## Public site structure
 
 - Research / QCMO
 - Sustainable Finance
-- Investment Projects
-- Tools
+- Project Intelligence
+- Financial Tools
 - Education
+- Methodology & Trust
 
-## Deployment target
+The public UX follows a progressive-disclosure rule: keep the first decision simple and expose technical depth only when users need it.
 
-The site is designed as a static-first project for **Cloudflare Pages**, connected to this GitHub repository and served at:
+## Deployment
+
+The production site uses a **Cloudflare Worker with Static Assets**, connected to this GitHub repository and served at:
 
 `https://cfinvesting.com`
 
-Initial Cloudflare Pages settings:
+Current deployment configuration is defined in `wrangler.jsonc`:
 
+- Worker: `cf-investing`
 - Production branch: `main`
-- Framework preset: `None`
-- Build command: leave blank
-- Build output directory: `/`
+- Static assets directory: `./public`
+- Observability: enabled
+- Git integration: changes merged to `main` are intended to trigger the Cloudflare build/deploy flow
+
+The root domain is canonical. Deployment status should be verified in Cloudflare before treating a Git commit as publicly live.
+
+## Project Intelligence operations
+
+Project Intelligence uses separate operational layers for:
+
+- source discovery;
+- source freshness monitoring;
+- human review;
+- normalized published project records.
+
+Automated discovery or monitoring signals do **not** publish or change material project facts automatically. Primary-source review remains required.
 
 ## Repository policy
 
@@ -40,4 +57,4 @@ The MIT license applies to repository code unless otherwise stated. Editorial co
 
 ## Disclaimer
 
-CF Investing provides research and educational information. Nothing published on the site constitutes personalized investment advice or an offer or solicitation to buy or sell securities.
+CF Investing provides research, educational and analytical information. Nothing published on the site constitutes personalized investment advice, brokerage activity, a financing commitment or an offer or solicitation to buy or sell securities.
