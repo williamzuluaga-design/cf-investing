@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Low-frequency freshness monitoring of primary sources already used in CF Investing Project Intelligence.",
+  "policy": "A detected source change creates a review signal only. It must not automatically change published project facts.",
+  "sources": [
+    {
+      "id": "wimke-solar-source",
+      "record_id": "wimke-solar",
+      "name": "Wimke Solar Photovoltaic Project",
+      "source_name": "BID Invest",
+      "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
+      "kind": "record_source",
+      "check_mode": "normalized_text_hash",
+      "enabled": true
+    },
+    {
+      "id": "caf-celsia-source",
+      "record_id": "caf-celsia-green-financing",
+      "name": "CAF–Celsia Green Financing",
+      "source_name": "CAF",
+      "url": "https://www.caf.com/es/actualidad/noticias/financiamiento-100-verde-caf-y-celsia-concretan-acuerdo-para-el-desarrollo-energetico-de-colombia/",
+      "kind": "record_source",
+      "check_mode": "normalized_text_hash",
+      "enabled": true
+    },
+    {
+      "id": "bogota-green-bond-source",
+      "record_id": "bogota-green-bond",
+      "name": "Bogotá International Green Bond",
+      "source_name": "CAF",
+      "url": "https://www.caf.com/es/actualidad/noticias/bogota-abrio-un-nuevo-camino-para-las-ciudades-de-america-latina-con-su-bono-verde-internacional/",
+      "kind": "record_source",
+      "check_mode": "normalized_text_hash",
+      "enabled": true
+    },
+    {
+      "id": "caf-bbva-source",
+      "record_id": "caf-bbva-reconstruction",
+      "name": "CAF–BBVA Sustainability & Reconstruction Line",
+      "source_name": "CAF",
+      "url": "https://www.caf.com/es/actualidad/noticias/caf-y-bbva-destinan-us-200-millones-a-proyectos-de-sostenibilidad-y-reconstruccion-tras-el-terremoto-en-colombia/",
+      "kind": "record_source",
+      "check_mode": "normalized_text_hash",
+      "enabled": true
+    },
+    {
+      "id": "mineria-transforma-source",
+      "record_id": "mineria-transforma-2026",
+      "name": "Minería que Transforma 2026",
+      "source_name": "Bancóldex",
+      "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026",
+      "kind": "record_source",
+      "check_mode": "normalized_text_hash",
+      "enabled": true
+    }
+  ]
+}
