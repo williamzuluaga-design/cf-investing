@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "updated_at": null,
+  "monitor_status": "not_run",
+  "policy": "Monitoring detects possible source changes only. Published project facts require human review before update.",
+  "summary": {
+    "sources": 5,
+    "healthy": 0,
+    "changed_last_run": 0,
+    "errors": 0,
+    "pending_baseline": 5
+  },
+  "sources": [
+    {"id":"wimke-solar-source","record_id":"wimke-solar","name":"Wimke Solar Photovoltaic Project","source_name":"BID Invest","url":"https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas","status":"pending_baseline","last_checked_at":null,"last_change_detected_at":null},
+    {"id":"caf-celsia-source","record_id":"caf-celsia-green-financing","name":"CAF–Celsia Green Financing","source_name":"CAF","url":"https://www.caf.com/es/actualidad/noticias/financiamiento-100-verde-caf-y-celsia-concretan-acuerdo-para-el-desarrollo-energetico-de-colombia/","status":"pending_baseline","last_checked_at":null,"last_change_detected_at":null},
+    {"id":"bogota-green-bond-source","record_id":"bogota-green-bond","name":"Bogotá International Green Bond","source_name":"CAF","url":"https://www.caf.com/es/actualidad/noticias/bogota-abrio-un-nuevo-camino-para-las-ciudades-de-america-latina-con-su-bono-verde-internacional/","status":"pending_baseline","last_checked_at":null,"last_change_detected_at":null},
+    {"id":"caf-bbva-source","record_id":"caf-bbva-reconstruction","name":"CAF–BBVA Sustainability & Reconstruction Line","source_name":"CAF","url":"https://www.caf.com/es/actualidad/noticias/caf-y-bbva-destinan-us-200-millones-a-proyectos-de-sostenibilidad-y-reconstruccion-tras-el-terremoto-en-colombia/","status":"pending_baseline","last_checked_at":null,"last_change_detected_at":null},
+    {"id":"mineria-transforma-source","record_id":"mineria-transforma-2026","name":"Minería que Transforma 2026","source_name":"Bancóldex","url":"https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026","status":"pending_baseline","last_checked_at":null,"last_change_detected_at":null}
+  ],
+  "last_run_changes": []
+}
