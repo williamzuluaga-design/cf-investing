@@ -26,6 +26,13 @@ FORBIDDEN = (
     "Cloudflare Pages",
     "/data/project-sources.json",
 )
+HOME_METADATA = (
+    'rel="icon"',
+    'property="og:title"',
+    'property="og:description"',
+    'name="twitter:card"',
+    'application/ld+json',
+)
 
 
 class AuditParser(HTMLParser):
@@ -116,10 +123,15 @@ def main() -> int:
             if stale in text:
                 errors.append(f"{rel}: stale reference found: {stale}")
 
+        if rel in {"/index.html", "/es/index.html"}:
+            for marker in HOME_METADATA:
+                if marker not in text:
+                    errors.append(f"{rel}: required homepage metadata missing: {marker}")
+
         parser = AuditParser()
         try:
             parser.feed(text)
-        except Exception as exc:  # HTMLParser is permissive; keep a useful failure signal.
+        except Exception as exc:
             errors.append(f"{rel}: HTML parse failed: {exc}")
             continue
 
@@ -180,6 +192,9 @@ def main() -> int:
         expected = "Sitemap: https://cfinvesting.com/sitemap.xml"
         if expected not in robots_text:
             errors.append("robots.txt does not advertise the canonical sitemap")
+
+    if not (PUBLIC / "favicon.svg").exists():
+        errors.append("public/favicon.svg is missing")
 
     summary = {
         "html_pages": len(html_files),
