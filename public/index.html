@@ -33,7 +33,7 @@
   }
   </script>
   <style>
-    .path-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}.path-card{background:white;border:1px solid #dfe6f0;border-radius:18px;padding:24px}.path-card h3{margin:.25rem 0 .6rem}.question{font-weight:800;color:#263954}.advanced{margin-top:22px;background:#f7f9fc;border:1px solid #dfe6f0;border-radius:14px;padding:15px 17px}.advanced summary{cursor:pointer;font-weight:800}.simple-flow{margin-top:24px}.pulse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.pulse-card{background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:20px}.pulse-card h3{margin:.25rem 0 .55rem;font-size:1.05rem}.pulse-label{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#53657f;margin:0}.pulse-metric{font-weight:800;color:#132238}.pulse-meta{font-size:.85rem;color:#66758a;margin:.5rem 0 0}.pulse-sources{margin-top:12px;font-size:.9rem}.pulse-sources summary{cursor:pointer;font-weight:700}.pulse-evidence{font-size:.85rem;color:#66758a}.pulse-sources ul{padding-left:18px;margin-bottom:0}@media(max-width:860px){.pulse-grid{grid-template-columns:1fr}.path-grid{grid-template-columns:1fr}}
+    .path-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}.path-card{background:white;border:1px solid #dfe6f0;border-radius:18px;padding:24px}.path-card h3{margin:.25rem 0 .6rem}.question{font-weight:800;color:#263954}.advanced{margin-top:22px;background:#f7f9fc;border:1px solid #dfe6f0;border-radius:14px;padding:15px 17px}.advanced summary{cursor:pointer;font-weight:800}.simple-flow{margin-top:24px}.pulse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.pulse-card{background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:20px}.pulse-card h3{margin:.25rem 0 .55rem;font-size:1.05rem}.pulse-label{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#53657f;margin:0}.pulse-metric{font-weight:800;color:#132238}.pulse-meta{font-size:.85rem;color:#66758a;margin:.5rem 0 0}.pulse-sources{margin-top:12px;font-size:.9rem}.pulse-sources summary{cursor:pointer;font-weight:700}.pulse-evidence{font-size:.85rem;color:#66758a}.pulse-sources ul{padding-left:18px;margin-bottom:0}.brief-signup{max-width:760px}.brief-form{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;margin-top:18px}.brief-form input[type=email]{width:100%;padding:12px 14px;border:1px solid #cfd8e6;border-radius:10px;font:inherit;background:#fff}.brief-consent{grid-column:1/-1;display:flex;gap:9px;align-items:flex-start;font-size:.86rem;color:#5f6d82}.brief-consent input{margin-top:3px}.brief-status{grid-column:1/-1;min-height:1.2em;font-size:.9rem;font-weight:700}.brief-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}@media(max-width:860px){.pulse-grid{grid-template-columns:1fr}.path-grid{grid-template-columns:1fr}}@media(max-width:620px){.brief-form{grid-template-columns:1fr}.brief-form button{width:100%}}
   </style>
 </head>
 <body>
@@ -66,46 +66,39 @@
     </section>
 
     <section class="section alt">
-      <p class="kicker">Choose one path</p>
-      <h2>What are you trying to understand?</h2>
-      <div class="path-grid">
-        <article class="path-card">
-          <p class="question">What is changing in markets and finance?</p>
-          <h3>Research</h3>
-          <p>Use QCMO and recurring research to interpret markets, corporate finance, sectors and investor behavior.</p>
-          <p><a class="button primary" href="/research/">Explore Research</a></p>
-        </article>
-        <article class="path-card">
-          <p class="question">How does sustainable capital move?</p>
-          <h3>Sustainable Finance</h3>
-          <p>Understand capital flows, ecosystem actors and plausible financing pathways for climate and impact needs.</p>
-          <p><a class="button primary" href="/sustainable-finance/">Explore Sustainable Finance</a></p>
-        </article>
-        <article class="path-card">
-          <p class="question">Is this opportunity ready for capital?</p>
-          <h3>Project Intelligence</h3>
-          <p>Review documented projects, evidence status, financing structures and the questions that still need diligence.</p>
-          <p><a class="button primary" href="/projects/">Explore Projects</a></p>
-        </article>
-        <article class="path-card">
-          <p class="question">What do the numbers imply?</p>
-          <h3>Financial Tools</h3>
-          <p>Use simple first-pass models for valuation, project bankability and investor risk profiling.</p>
-          <p><a class="button primary" href="/tools/">Open Tools</a></p>
-        </article>
+      <div class="brief-signup">
+        <p class="kicker">CF Investing Brief</p>
+        <h2>Three financial signals. One short weekly email.</h2>
+        <p>Receive an evidence-first executive brief built around markets, capital and the next decision point to watch.</p>
+        <form class="brief-form" data-newsletter-form data-lang="en" data-source="home" data-interest="general" novalidate>
+          <label class="brief-honeypot" aria-hidden="true">Company website<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label>
+          <label><span class="brief-honeypot">Email</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address" required></label>
+          <button class="button primary" type="submit">Subscribe</button>
+          <label class="brief-consent"><input name="consent" type="checkbox" required><span>I want to receive CF Investing Brief and acknowledge the <a href="/privacy/">Privacy Notice</a> and <a href="/terms/">Terms</a>. Confirmation is required before the subscription becomes active.</span></label>
+          <p class="brief-status" data-newsletter-status aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
     <section class="section">
-      <p class="kicker">How to use CF Investing</p>
-      <h2>Evidence first. Models second. Decisions last.</h2>
-      <div class="flow simple-flow" aria-label="CF Investing decision flow">
-        <span>Observe evidence</span><b>→</b><span>Analyze the question</span><b>→</b><span>Test assumptions</span><b>→</b><span>Validate with primary sources</span>
+      <p class="kicker">Choose one path</p>
+      <h2>What are you trying to understand?</h2>
+      <div class="path-grid">
+        <article class="path-card"><p class="question">What is changing in markets and finance?</p><h3>Research</h3><p>Use QCMO and recurring research to interpret markets, corporate finance, sectors and investor behavior.</p><p><a class="button primary" href="/research/">Explore Research</a></p></article>
+        <article class="path-card"><p class="question">How does sustainable capital move?</p><h3>Sustainable Finance</h3><p>Understand capital flows, ecosystem actors and plausible financing pathways for climate and impact needs.</p><p><a class="button primary" href="/sustainable-finance/">Explore Sustainable Finance</a></p></article>
+        <article class="path-card"><p class="question">Is this opportunity ready for capital?</p><h3>Project Intelligence</h3><p>Review documented projects, evidence status, financing structures and the questions that still need diligence.</p><p><a class="button primary" href="/projects/">Explore Projects</a></p></article>
+        <article class="path-card"><p class="question">What do the numbers imply?</p><h3>Financial Tools</h3><p>Use simple first-pass models for valuation, project bankability and investor risk profiling.</p><p><a class="button primary" href="/tools/">Open Tools</a></p></article>
       </div>
-      <p class="note">CF Investing is an informational, research and educational layer. It does not receive investment orders, custody funds, approve financing or execute securities transactions.</p>
     </section>
 
     <section class="section alt">
+      <p class="kicker">How to use CF Investing</p>
+      <h2>Evidence first. Models second. Decisions last.</h2>
+      <div class="flow simple-flow" aria-label="CF Investing decision flow"><span>Observe evidence</span><b>→</b><span>Analyze the question</span><b>→</b><span>Test assumptions</span><b>→</b><span>Validate with primary sources</span></div>
+      <p class="note">CF Investing is an informational, research and educational layer. It does not receive investment orders, custody funds, approve financing or execute securities transactions.</p>
+    </section>
+
+    <section class="section">
       <p class="kicker">Go deeper only when useful</p>
       <details class="advanced">
         <summary>Education, research programs and methodology</summary>
@@ -128,9 +121,11 @@
   <footer>
     <strong>CF Investing</strong>
     <p>Research, educational and analytical information only. Nothing on this site constitutes personalized investment advice, brokerage activity or a securities offering.</p>
+    <p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
     <p>© <span id="year"></span> CF Investing.</p>
   </footer>
   <script src="/assets/js/executive-pulse.js"></script>
+  <script src="/assets/js/newsletter.js"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
