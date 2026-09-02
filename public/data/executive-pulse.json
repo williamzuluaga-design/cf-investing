@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-02",
+  "review_by": "2026-09-17",
+  "policy": "Curated executive signals. Facts are linked to primary or source-reviewed records; implications are CF Investing analytical interpretation, not investment advice.",
+  "signals": [
+    {
+      "id": "policy-rates-sep-2026",
+      "type": "markets",
+      "label_en": "Markets",
+      "label_es": "Mercados",
+      "headline_en": "Rates remain the key executive variable",
+      "headline_es": "Las tasas siguen siendo la variable ejecutiva clave",
+      "metric_en": "Colombia 12% · Fed 3.50–3.75%",
+      "metric_es": "Colombia 12% · Fed 3,50–3,75%",
+      "why_en": "The policy-rate gap keeps financing costs, discount rates and FX sensitivity central to corporate planning.",
+      "why_es": "La brecha de tasas mantiene el costo de financiación, las tasas de descuento y la sensibilidad cambiaria en el centro de la planeación corporativa.",
+      "source_status": "Primary sources",
+      "sources": [
+        {
+          "name": "Banco de la República",
+          "url": "https://www.banrep.gov.co/es/calendario-junta-directiva"
+        },
+        {
+          "name": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+        }
+      ]
+    },
+    {
+      "id": "caf-bbva-200m",
+      "type": "capital",
+      "label_en": "Capital signal",
+      "label_es": "Señal de capital",
+      "headline_en": "US$200M sustainability & reconstruction line",
+      "headline_es": "Línea de US$200M para sostenibilidad y reconstrucción",
+      "metric_en": "CAF + BBVA Colombia · announced 26 Aug",
+      "metric_es": "CAF + BBVA Colombia · anunciada 26 ago",
+      "why_en": "A recent source-reviewed financing case shows institutional capital moving through bank and development-finance channels toward sustainability and reconstruction uses.",
+      "why_es": "Un caso reciente revisado en fuente muestra capital institucional canalizado por banca y financiación de desarrollo hacia usos de sostenibilidad y reconstrucción.",
+      "source_status": "Public Source · Source Reviewed",
+      "sources": [
+        {
+          "name": "CF Investing project profile",
+          "url_en": "/projects/caf-bbva-reconstruction/",
+          "url_es": "/es/proyectos/caf-bbva-reconstruction/"
+        }
+      ]
+    },
+    {
+      "id": "event-radar-sep-oct-2026",
+      "type": "events",
+      "label_en": "Events radar",
+      "label_es": "Radar de eventos",
+      "headline_en": "Three dates can reset the next decision cycle",
+      "headline_es": "Tres fechas pueden redefinir el próximo ciclo de decisión",
+      "metric_en": "Fed 15–16 Sep · BanRep 30 Sep · Wimke 6 Oct",
+      "metric_es": "Fed 15–16 sep · BanRep 30 sep · Wimke 6 oct",
+      "why_en": "The first two dates can change rate expectations; the third is the estimated board-approval date in the reviewed Wimke Solar disclosure.",
+      "why_es": "Las dos primeras fechas pueden cambiar expectativas de tasas; la tercera es la fecha estimada de aprobación de directorio en la divulgación revisada de Wimke Solar.",
+      "source_status": "Primary sources + Source Reviewed",
+      "sources": [
+        {
+          "name": "Federal Reserve FOMC calendar",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        },
+        {
+          "name": "Banco de la República",
+          "url": "https://www.banrep.gov.co/es/noticias/calendario-actividades-junta-directiva/reunion-septiembre-2026"
+        },
+        {
+          "name": "CF Investing Wimke profile",
+          "url_en": "/projects/wimke-solar/",
+          "url_es": "/es/proyectos/wimke-solar/"
+        }
+      ]
+    }
+  ]
+}
