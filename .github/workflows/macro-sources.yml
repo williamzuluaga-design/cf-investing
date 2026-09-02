@@ -1,0 +1,49 @@
+name: Macro source metadata
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 13 * * 1"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update_macro_sources.py"
+      - "public/data/macro-sources.json"
+      - ".github/workflows/macro-sources.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: macro-source-metadata
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh public source metadata only
+        run: python scripts/update_macro_sources.py
+
+      - name: Commit metadata when it changes
+        run: |
+          if git diff --quiet -- public/data/macro-sources.json; then
+            echo "No macro-source metadata changes."
+            exit 0
+          fi
+          git config user.name "cf-investing-macro-sources"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/macro-sources.json
+          git commit -m "Refresh external macro source metadata"
+          git push
