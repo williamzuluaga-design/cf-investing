@@ -35,6 +35,34 @@ const validEmail = (value) => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 };
 
+async function checkBeehiivConnection(env) {
+  if (!env.BEEHIIV_API_KEY || !env.BEEHIIV_PUBLICATION_ID) {
+    return json({ ok: false, code: 'newsletter_unavailable' }, 503);
+  }
+
+  const endpoint = `https://api.beehiiv.com/v2/publications/${encodeURIComponent(env.BEEHIIV_PUBLICATION_ID)}`;
+  try {
+    const response = await fetch(endpoint, {
+      headers: { authorization: `Bearer ${env.BEEHIIV_API_KEY}` }
+    });
+    if (response.ok) {
+      return json({ ok: true, provider: 'beehiiv', publication_connected: true }, 200);
+    }
+    if (response.status === 401 || response.status === 403) {
+      return json({ ok: false, code: 'provider_auth_failed' }, 502);
+    }
+    if (response.status === 404) {
+      return json({ ok: false, code: 'publication_not_found' }, 502);
+    }
+    if (response.status === 429) {
+      return json({ ok: false, code: 'try_again_later' }, 429);
+    }
+    return json({ ok: false, code: 'provider_unavailable' }, 502);
+  } catch {
+    return json({ ok: false, code: 'provider_unavailable' }, 502);
+  }
+}
+
 async function subscribeToBeehiiv(request, env) {
   if (request.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
@@ -131,6 +159,10 @@ async function subscribeToBeehiiv(request, env) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.pathname === '/api/newsletter/health') {
+      return checkBeehiivConnection(env);
+    }
 
     if (url.pathname === '/api/newsletter/subscribe') {
       return subscribeToBeehiiv(request, env);
