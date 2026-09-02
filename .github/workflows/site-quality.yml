@@ -30,3 +30,6 @@ jobs:
 
       - name: Audit deployable static site
         run: python scripts/site_quality.py
+
+      - name: Check public canonical and legacy domains
+        run: python scripts/live_domain_check.py
