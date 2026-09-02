@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-02",
+  "policy": "External macro-source metadata only. CF Investing does not mirror, republish, transform into signals, or ingest Global Macro Database numerical series unless explicit written permission is obtained for the intended use.",
+  "sources": [
+    {
+      "id": "global-macro-database",
+      "name": "Global Macro Database",
+      "organization": "KMueller-Lab",
+      "status": "reference_only",
+      "data_ingest_enabled": false,
+      "permission_required": true,
+      "current_release": "2026_06",
+      "coverage": {
+        "variables": 46,
+        "countries": 239,
+        "sources": 160,
+        "historical_start": 1086,
+        "historical_end": 2025,
+        "forecast_end": 2030
+      },
+      "official_site": "https://www.globalmacrodata.com/",
+      "explore_url": "https://www.globalmacrodata.com/explore.html",
+      "data_url": "https://www.globalmacrodata.com/data.html",
+      "documentation_url": "https://www.globalmacrodata.com/documentation.html",
+      "license_url": "https://www.globalmacrodata.com/license.html",
+      "github_repository": "https://github.com/KMueller-Lab/Global-Macro-Database",
+      "python_repository": "https://github.com/KMueller-Lab/Global-Macro-Database-Python",
+      "latest_upstream_commit": "29cf217fdff885c12dcdff240e37b7d63c16b2a2",
+      "latest_upstream_commit_date": "2026-07-01T08:41:34Z",
+      "code_license_note": "Reusable helper code may be MIT-licensed in the relevant repository; this does not change the separate restrictions that govern GMD data.",
+      "rights_note": "The GMD Research Use Terms allow academic and non-profit research but prohibit commercial use and republication on another website, API, platform, product, model, index or signal without explicit written approval. CF Investing therefore uses only public release metadata and outbound source links at this stage.",
+      "citation": "Müller, K., Xu, C., Lehbib, M., & Chen, Z. (2025). The Global Macro Database: A New International Macroeconomic Dataset. NBER Working Paper 33714."
+    }
+  ]
+}
