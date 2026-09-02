@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cfinvesting.com/</loc></url>
+  <url><loc>https://cfinvesting.com/institutional/</loc></url>
   <url><loc>https://cfinvesting.com/research/</loc></url>
   <url><loc>https://cfinvesting.com/research/qcmo/</loc></url>
   <url><loc>https://cfinvesting.com/research/qcmo/persona-natural/</loc></url>
@@ -27,6 +28,7 @@
   <url><loc>https://cfinvesting.com/education/</loc></url>
   <url><loc>https://cfinvesting.com/methodology/</loc></url>
   <url><loc>https://cfinvesting.com/es/</loc></url>
+  <url><loc>https://cfinvesting.com/es/institucional/</loc></url>
   <url><loc>https://cfinvesting.com/es/research/</loc></url>
   <url><loc>https://cfinvesting.com/es/research/qcmo/</loc></url>
   <url><loc>https://cfinvesting.com/es/research/qcmo/persona-natural/</loc></url>
