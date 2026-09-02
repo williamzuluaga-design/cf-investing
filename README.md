@@ -34,11 +34,26 @@ Current deployment configuration is defined in `wrangler.jsonc`:
 
 - Worker: `cf-investing`
 - Production branch: `main`
+- Worker entry point: `./src/worker.js`
 - Static assets directory: `./public`
+- Static assets binding: `ASSETS`
+- Worker-first routes: `/api/*`
 - Observability: enabled
 - Git integration: changes merged to `main` are intended to trigger the Cloudflare build/deploy flow
 
 The root domain is canonical. Deployment status should be verified in Cloudflare before treating a Git commit as publicly live.
+
+## Newsletter backend
+
+CF Investing is prepared for an API-first Beehiiv integration:
+
+`CF Investing -> /api/newsletter/subscribe -> Cloudflare Worker -> Beehiiv API`
+
+The Beehiiv publication ID is stored as a non-secret Wrangler variable. The API credential must exist only as the Cloudflare Secret `BEEHIIV_API_KEY`; it must never be committed to GitHub or exposed in client-side code.
+
+The first version records acquisition context with Beehiiv UTM fields and forces double opt-in. It does not automatically reactivate previously unsubscribed contacts.
+
+See `docs/beehiiv-integration.md` for the setup and activation gate. The public newsletter form should remain unexposed until the Cloudflare secret, controlled API test and privacy/terms requirements are complete.
 
 ## Project Intelligence operations
 
