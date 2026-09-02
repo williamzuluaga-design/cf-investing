@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Live public-domain checks for CF Investing.
 
-Canonical-host failures are blocking errors. Legacy-domain redirect gaps are
-reported as warnings until the defensive domain is intentionally configured.
-No DNS or hosting changes are made by this script.
+Secure canonical-host availability is blocking. HTTP canonicalization and legacy-
+domain redirect gaps are reported as warnings until Cloudflare redirect rules are
+intentionally configured. No DNS or hosting changes are made by this script.
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ from urllib.parse import urljoin, urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener, HTTPSHandler
 
 CANONICAL_HOST = "cfinvesting.com"
-UA = "CFInvesting-LiveDomainCheck/1.0"
+UA = "CFInvesting-LiveDomainCheck/1.1"
 TIMEOUT = 20
 
 
@@ -71,17 +71,25 @@ def main() -> int:
     warnings: list[str] = []
     checks = []
 
-    canonical_variants = [
+    blocking_variants = [
         ("https://cfinvesting.com/", "/"),
-        ("http://cfinvesting.com/", "/"),
         ("https://www.cfinvesting.com/", "/"),
-        ("http://www.cfinvesting.com/", "/"),
     ]
-    for url, expected_path in canonical_variants:
+    for url, expected_path in blocking_variants:
         result = trace(url)
         checks.append(result)
         if not canonical_ok(result, expected_path):
-            errors.append(f"canonical variant did not resolve to https://{CANONICAL_HOST}{expected_path}: {url}")
+            errors.append(f"secure canonical variant did not resolve to https://{CANONICAL_HOST}{expected_path}: {url}")
+
+    http_variants = [
+        ("http://cfinvesting.com/", "/"),
+        ("http://www.cfinvesting.com/", "/"),
+    ]
+    for url, expected_path in http_variants:
+        result = trace(url)
+        checks.append(result)
+        if not canonical_ok(result, expected_path):
+            warnings.append(f"HTTP variant is not yet redirecting to https://{CANONICAL_HOST}{expected_path}: {url}")
 
     for path in ("/robots.txt", "/sitemap.xml"):
         url = f"https://{CANONICAL_HOST}{path}"
