@@ -1,0 +1,64 @@
+name: Executive CF Pulse
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 12 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "public/data/pulse-inputs.json"
+      - "public/data/projects.json"
+      - "scripts/build_executive_pulse.py"
+      - ".github/workflows/executive-pulse.yml"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: executive-cf-pulse
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build three executive signals
+        id: pulse
+        run: python scripts/build_executive_pulse.py
+
+      - name: Commit pulse when it changes
+        if: steps.pulse.outputs.changed == 'true'
+        run: |
+          git config user.name "cf-investing-pulse"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/executive-pulse.json
+          git commit -m "Refresh executive CF Pulse"
+          git push
+
+      - name: Open one review issue when inputs are stale
+        if: steps.pulse.outputs.review_required == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BY: ${{ steps.pulse.outputs.review_by }}
+        run: |
+          EXISTING=$(gh issue list --state open --search 'CF Pulse review required in:title' --json number --jq 'length')
+          if [ "$EXISTING" != "0" ]; then
+            echo "An open CF Pulse review issue already exists."
+            exit 0
+          fi
+          gh issue create \
+            --title "CF Pulse review required" \
+            --body "The semi-automatic CF Pulse has reached a reviewed-input boundary. Review official market facts and upcoming executive events, update public/data/pulse-inputs.json, and rerun the workflow. Current review-by date: ${REVIEW_BY}. Do not publish unsupported or inferred market facts."
