@@ -1,11 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated_at": "2026-09-02",
-  "review_by": "2026-09-17",
+  "review_by": "2026-09-15",
+  "status": "active",
   "policy": "Curated executive signals. Facts are linked to primary or source-reviewed records; implications are CF Investing analytical interpretation, not investment advice.",
+  "automation": "Semi-automatic: reviewed market/event inputs + latest source-reviewed Project Intelligence capital case.",
   "signals": [
     {
-      "id": "policy-rates-sep-2026",
+      "id": "markets-reviewed-signal",
       "type": "markets",
       "label_en": "Markets",
       "label_es": "Mercados",
@@ -28,16 +30,16 @@
       ]
     },
     {
-      "id": "caf-bbva-200m",
+      "id": "capital-caf-bbva-reconstruction",
       "type": "capital",
       "label_en": "Capital signal",
       "label_es": "Señal de capital",
-      "headline_en": "US$200M sustainability & reconstruction line",
-      "headline_es": "Línea de US$200M para sostenibilidad y reconstrucción",
-      "metric_en": "CAF + BBVA Colombia · announced 26 Aug",
-      "metric_es": "CAF + BBVA Colombia · anunciada 26 ago",
-      "why_en": "A recent source-reviewed financing case shows institutional capital moving through bank and development-finance channels toward sustainability and reconstruction uses.",
-      "why_es": "Un caso reciente revisado en fuente muestra capital institucional canalizado por banca y financiación de desarrollo hacia usos de sostenibilidad y reconstrucción.",
+      "headline_en": "US$200M credit line signal",
+      "headline_es": "Línea de crédito por US$200M",
+      "metric_en": "BBVA Colombia / eligible uses under the facility · 26 Aug 2026",
+      "metric_es": "BBVA Colombia / eligible uses under the facility · 26 ago 2026",
+      "why_en": "The latest source-reviewed case with a disclosed amount shows institutional capital moving through credit line toward resilience & reconstruction.",
+      "why_es": "El caso más reciente revisado en fuente con monto divulgado muestra capital institucional canalizado mediante línea de crédito hacia una necesidad documentada de financiación.",
       "source_status": "Public Source · Source Reviewed",
       "sources": [
         {
@@ -48,16 +50,16 @@
       ]
     },
     {
-      "id": "event-radar-sep-oct-2026",
+      "id": "events-next-reviewed",
       "type": "events",
       "label_en": "Events radar",
       "label_es": "Radar de eventos",
-      "headline_en": "Three dates can reset the next decision cycle",
-      "headline_es": "Tres fechas pueden redefinir el próximo ciclo de decisión",
+      "headline_en": "The next dates can reset the decision cycle",
+      "headline_es": "Las próximas fechas pueden redefinir el ciclo de decisión",
       "metric_en": "Fed 15–16 Sep · BanRep 30 Sep · Wimke 6 Oct",
       "metric_es": "Fed 15–16 sep · BanRep 30 sep · Wimke 6 oct",
-      "why_en": "The first two dates can change rate expectations; the third is the estimated board-approval date in the reviewed Wimke Solar disclosure.",
-      "why_es": "Las dos primeras fechas pueden cambiar expectativas de tasas; la tercera es la fecha estimada de aprobación de directorio en la divulgación revisada de Wimke Solar.",
+      "why_en": "These reviewed dates can change rate expectations or documented project decision timelines, so they belong on the executive watchlist.",
+      "why_es": "Estas fechas revisadas pueden cambiar expectativas de tasas o cronogramas documentados de decisión de proyectos, por lo que deben estar en el radar ejecutivo.",
       "source_status": "Primary sources + Source Reviewed",
       "sources": [
         {
@@ -69,7 +71,7 @@
           "url": "https://www.banrep.gov.co/es/noticias/calendario-actividades-junta-directiva/reunion-septiembre-2026"
         },
         {
-          "name": "CF Investing Wimke profile",
+          "name": "CF Investing Wimke Solar Photovoltaic Project profile",
           "url_en": "/projects/wimke-solar/",
           "url_es": "/es/proyectos/wimke-solar/"
         }
