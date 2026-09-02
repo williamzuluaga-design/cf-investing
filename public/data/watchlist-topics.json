@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-02",
+  "policy": "Browser-local topic preferences only. Topic matching uses the current reviewed CF Pulse and does not create personalized investment recommendations.",
+  "max_topics": 5,
+  "topics": [
+    {
+      "id": "colombia",
+      "label_en": "Colombia",
+      "label_es": "Colombia",
+      "description_en": "Rates, capital and reviewed decision points with a Colombia connection.",
+      "description_es": "Tasas, capital y puntos de decisión revisados con conexión a Colombia.",
+      "terms": ["colombia", "banrep", "banco de la república", "bogotá", "bancóldex"]
+    },
+    {
+      "id": "rates-fx",
+      "label_en": "Rates & FX",
+      "label_es": "Tasas y FX",
+      "description_en": "Policy rates, financing costs and foreign-exchange sensitivity.",
+      "description_es": "Tasas de política, costo de financiación y sensibilidad cambiaria.",
+      "terms": ["rate", "rates", "policy-rate", "fed", "banrep", "fx", "usd/cop", "tasa", "tasas", "cambiaria"]
+    },
+    {
+      "id": "development-finance",
+      "label_en": "Development Finance",
+      "label_es": "Financiación de desarrollo",
+      "description_en": "Multilateral, development-bank and institutional financing signals.",
+      "description_es": "Señales de multilaterales, banca de desarrollo y financiación institucional.",
+      "terms": ["caf", "bid", "idb", "bancóldex", "development", "financing", "credit line", "financiación", "línea de crédito"]
+    },
+    {
+      "id": "energy",
+      "label_en": "Energy & Transition",
+      "label_es": "Energía y transición",
+      "description_en": "Renewables, power infrastructure and transition-finance signals.",
+      "description_es": "Renovables, infraestructura eléctrica y señales de financiación de transición.",
+      "terms": ["energy", "renewable", "solar", "celsia", "wimke", "energía", "renovable", "transición"]
+    },
+    {
+      "id": "education",
+      "label_en": "Education & EdTech",
+      "label_es": "Educación y EdTech",
+      "description_en": "Reviewed finance, sector and capital signals relevant to education.",
+      "description_es": "Señales revisadas de finanzas, sector y capital relevantes para educación.",
+      "terms": ["education", "edtech", "university", "school", "educación", "universidad", "educativo"]
+    }
+  ]
+}
