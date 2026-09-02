@@ -1,0 +1,30 @@
+name: Newsletter backend health
+
+on:
+  push:
+    paths:
+      - 'src/worker.js'
+      - '.github/workflows/newsletter-health.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Cloudflare deployment
+        run: sleep 25
+      - name: Verify Beehiiv connection through production Worker
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5; do
+            echo "Attempt ${attempt}"
+            response="$(curl --fail-with-body --silent --show-error --max-time 20 https://cfinvesting.com/api/newsletter/health || true)"
+            echo "$response"
+            if echo "$response" | grep -q '"publication_connected":true'; then
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "Beehiiv connection health check did not succeed."
+          exit 1
