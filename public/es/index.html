@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CF Investing | Español","url":"https://cfinvesting.com/es/","description":"Inteligencia financiera basada en evidencia para investigación, finanzas sostenibles, inteligencia de proyectos y herramientas analíticas.","inLanguage":"es","isPartOf":{"@type":"WebSite","name":"CF Investing","url":"https://cfinvesting.com/"}}</script>
   <style>
-    .path-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}.path-card{background:white;border:1px solid #dfe6f0;border-radius:18px;padding:24px}.path-card h3{margin:.25rem 0 .6rem}.question{font-weight:800;color:#263954}.advanced{margin-top:22px;background:#f7f9fc;border:1px solid #dfe6f0;border-radius:14px;padding:15px 17px}.advanced summary{cursor:pointer;font-weight:800}.simple-flow{margin-top:24px}.pulse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.pulse-card{background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:20px}.pulse-card h3{margin:.25rem 0 .55rem;font-size:1.05rem}.pulse-label{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#53657f;margin:0}.pulse-metric{font-weight:800;color:#132238}.pulse-meta{font-size:.85rem;color:#66758a;margin:.5rem 0 0}.pulse-sources{margin-top:12px;font-size:.9rem}.pulse-sources summary{cursor:pointer;font-weight:700}.pulse-evidence{font-size:.85rem;color:#66758a}.pulse-sources ul{padding-left:18px;margin-bottom:0}@media(max-width:860px){.pulse-grid{grid-template-columns:1fr}.path-grid{grid-template-columns:1fr}}
+    .path-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}.path-card{background:white;border:1px solid #dfe6f0;border-radius:18px;padding:24px}.path-card h3{margin:.25rem 0 .6rem}.question{font-weight:800;color:#263954}.advanced{margin-top:22px;background:#f7f9fc;border:1px solid #dfe6f0;border-radius:14px;padding:15px 17px}.advanced summary{cursor:pointer;font-weight:800}.simple-flow{margin-top:24px}.pulse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.pulse-card{background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:20px}.pulse-card h3{margin:.25rem 0 .55rem;font-size:1.05rem}.pulse-label{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#53657f;margin:0}.pulse-metric{font-weight:800;color:#132238}.pulse-meta{font-size:.85rem;color:#66758a;margin:.5rem 0 0}.pulse-sources{margin-top:12px;font-size:.9rem}.pulse-sources summary{cursor:pointer;font-weight:700}.pulse-evidence{font-size:.85rem;color:#66758a}.pulse-sources ul{padding-left:18px;margin-bottom:0}.brief-signup{max-width:760px}.brief-form{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;margin-top:18px}.brief-form input[type=email]{width:100%;padding:12px 14px;border:1px solid #cfd8e6;border-radius:10px;font:inherit;background:#fff}.brief-consent{grid-column:1/-1;display:flex;gap:9px;align-items:flex-start;font-size:.86rem;color:#5f6d82}.brief-consent input{margin-top:3px}.brief-status{grid-column:1/-1;min-height:1.2em;font-size:.9rem;font-weight:700}.brief-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}@media(max-width:860px){.pulse-grid{grid-template-columns:1fr}.path-grid{grid-template-columns:1fr}}@media(max-width:620px){.brief-form{grid-template-columns:1fr}.brief-form button{width:100%}}
   </style>
 </head>
 <body>
@@ -56,6 +56,21 @@
     </section>
 
     <section class="section alt">
+      <div class="brief-signup">
+        <p class="kicker">CF Investing Brief</p>
+        <h2>Tres señales financieras. Un correo breve por semana.</h2>
+        <p>Recibe un brief ejecutivo basado en evidencia sobre mercados, capital y el próximo punto de decisión que merece seguimiento.</p>
+        <form class="brief-form" data-newsletter-form data-lang="es" data-source="home" data-interest="general" novalidate>
+          <label class="brief-honeypot" aria-hidden="true">Sitio de empresa<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label>
+          <label><span class="brief-honeypot">Correo</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="tu@correo.com" aria-label="Correo electrónico" required></label>
+          <button class="button primary" type="submit">Suscribirme</button>
+          <label class="brief-consent"><input name="consent" type="checkbox" required><span>Quiero recibir CF Investing Brief y reconozco el <a href="/es/privacidad/">Aviso de Privacidad</a> y los <a href="/es/terminos/">Términos</a>. La suscripción solo se activa después de confirmar el correo.</span></label>
+          <p class="brief-status" data-newsletter-status aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
       <p class="kicker">Elige una ruta</p>
       <h2>¿Qué necesitas entender?</h2>
       <div class="path-grid">
@@ -66,14 +81,14 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <p class="kicker">Cómo usar CF Investing</p>
       <h2>Primero evidencia. Luego modelos. Al final, decisiones.</h2>
       <div class="flow simple-flow"><span>Observar evidencia</span><b>→</b><span>Analizar la pregunta</span><b>→</b><span>Probar supuestos</span><b>→</b><span>Validar con fuentes primarias</span></div>
       <p class="note">CF Investing es una capa informativa, educativa y de investigación. No recibe órdenes de inversión, no custodia fondos, no aprueba financiación ni ejecuta transacciones de valores.</p>
     </section>
 
-    <section class="section alt">
+    <section class="section">
       <p class="kicker">Profundiza solo cuando sea útil</p>
       <details class="advanced">
         <summary>Educación, programas de investigación y metodología</summary>
@@ -92,8 +107,9 @@
       <p><a class="button primary" href="/es/institucional/" data-conversion="institutional-brief">Para organizaciones: ver brief institucional</a></p>
     </section>
   </main>
-  <footer><strong>CF Investing</strong><p>Información educativa, analítica y de investigación. No constituye asesoría personalizada, intermediación ni oferta de valores.</p></footer>
+  <footer><strong>CF Investing</strong><p>Información educativa, analítica y de investigación. No constituye asesoría personalizada, intermediación ni oferta de valores.</p><p><a href="/es/privacidad/">Privacidad</a> · <a href="/es/terminos/">Términos</a></p></footer>
   <script src="/assets/js/executive-pulse.js"></script>
+  <script src="/assets/js/newsletter.js"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
