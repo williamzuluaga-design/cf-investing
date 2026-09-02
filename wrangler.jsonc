@@ -1,11 +1,19 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cf-investing",
+  "main": "./src/worker.js",
   "compatibility_date": "2026-08-28",
   "observability": {
     "enabled": true
   },
+  "vars": {
+    "BEEHIIV_PUBLICATION_ID": "pub_84f3b627-2b28-47c6-9b63-87595841f5b1"
+  },
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
   }
 }
