@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Executive Watchlist | CF Investing</title>
+  <meta name="description" content="Create a browser-local executive watchlist for up to five CF Investing topics and see reviewed signals that changed since your last visit." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="canonical" href="https://cfinvesting.com/watchlist/" />
+  <link rel="alternate" hreflang="en" href="https://cfinvesting.com/watchlist/" />
+  <link rel="alternate" hreflang="es" href="https://cfinvesting.com/es/lista-ejecutiva/" />
+  <link rel="alternate" hreflang="x-default" href="https://cfinvesting.com/watchlist/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>
+    .watchlist-shell{max-width:920px;margin:0 auto}.watchlist-head{display:flex;justify-content:space-between;gap:18px;align-items:end}.watchlist-head h2{margin-bottom:0}.watchlist-counter{font-size:.9rem;color:#66758a}.watchlist-topics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}.watchlist-topic{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #dfe6f0;border-radius:14px;padding:16px;cursor:pointer}.watchlist-topic input{margin-top:4px}.watchlist-topic span{display:grid;gap:3px}.watchlist-topic small{color:#66758a;line-height:1.4}.watchlist-results{margin-top:28px}.watchlist-card{background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:18px;margin:12px 0}.watchlist-card h4{margin:0 0 8px}.watchlist-card ul{padding-left:20px}.watchlist-badge{font-size:.86rem;font-weight:700;color:#53657f}.watchlist-badge.new,.watchlist-new-item{color:#132238}.watchlist-privacy{font-size:.86rem;color:#66758a;margin-top:16px}@media(max-width:720px){.watchlist-head{display:block}.watchlist-topics{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CF Investing home">CF <span>Investing</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/research/">Research</a><a href="/sustainable-finance/">Sustainable Finance</a><a href="/projects/">Projects</a><a href="/tools/">Tools</a><a href="/methodology/">Methodology</a>
+      <span class="lang-switch"><a class="active" href="/watchlist/" lang="en">EN</a><a href="/es/lista-ejecutiva/" lang="es">ES</a></span>
+    </nav>
+  </header>
+  <main>
+    <section class="hero watchlist-shell">
+      <p class="eyebrow">CF PULSE · EXECUTIVE WATCHLIST</p>
+      <h1>Follow five topics. See only what changed.</h1>
+      <p class="lede">Choose up to five executive themes. Your selections and comparison snapshot stay only in this browser; no account is required.</p>
+      <p><a href="/">← Back to CF Pulse</a></p>
+    </section>
+    <section class="section alt">
+      <div class="watchlist-shell" data-executive-watchlist data-lang="en"></div>
+    </section>
+    <section class="section watchlist-shell">
+      <h2>How it works</h2>
+      <p>The watchlist compares the current reviewed CF Pulse with the snapshot stored from your previous visit. It does not monitor portfolios, execute trades, create personalized recommendations or send alerts.</p>
+      <p class="note">A topic with no current match is intentionally shown as having no reviewed signal rather than being filled with inferred or unverified content.</p>
+    </section>
+  </main>
+  <footer><strong>CF Investing</strong><p>Research, educational and analytical information only. Nothing on this site constitutes personalized investment advice, brokerage activity or a securities offering.</p></footer>
+  <script src="/assets/js/executive-watchlist.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
