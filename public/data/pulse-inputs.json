@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "markets": {
+    "reviewed_at": "2026-09-02",
+    "valid_through": "2026-09-17",
+    "label_en": "Markets",
+    "label_es": "Mercados",
+    "headline_en": "Rates remain the key executive variable",
+    "headline_es": "Las tasas siguen siendo la variable ejecutiva clave",
+    "metric_en": "Colombia 12% · Fed 3.50–3.75%",
+    "metric_es": "Colombia 12% · Fed 3,50–3,75%",
+    "why_en": "The policy-rate gap keeps financing costs, discount rates and FX sensitivity central to corporate planning.",
+    "why_es": "La brecha de tasas mantiene el costo de financiación, las tasas de descuento y la sensibilidad cambiaria en el centro de la planeación corporativa.",
+    "source_status": "Primary sources",
+    "sources": [
+      {
+        "name": "Banco de la República",
+        "url": "https://www.banrep.gov.co/es/calendario-junta-directiva"
+      },
+      {
+        "name": "Federal Reserve",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+      }
+    ]
+  },
+  "events": [
+    {
+      "date": "2026-09-15",
+      "date_end": "2026-09-16",
+      "short_en": "Fed 15–16 Sep",
+      "short_es": "Fed 15–16 sep",
+      "name_en": "Federal Reserve FOMC meeting",
+      "name_es": "Reunión FOMC de la Reserva Federal",
+      "source": {
+        "name": "Federal Reserve FOMC calendar",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "short_en": "BanRep 30 Sep",
+      "short_es": "BanRep 30 sep",
+      "name_en": "Banco de la República board meeting",
+      "name_es": "Reunión de la Junta del Banco de la República",
+      "source": {
+        "name": "Banco de la República",
+        "url": "https://www.banrep.gov.co/es/noticias/calendario-actividades-junta-directiva/reunion-septiembre-2026"
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "short_en": "Wimke 6 Oct",
+      "short_es": "Wimke 6 oct",
+      "name_en": "Estimated Wimke Solar board-approval date",
+      "name_es": "Fecha estimada de aprobación de directorio de Wimke Solar",
+      "project_id": "wimke-solar"
+    }
+  ],
+  "capital": {
+    "selection": "latest_source_reviewed_project_with_disclosed_amount",
+    "fallback_project_id": "caf-bbva-reconstruction"
+  }
+}
