@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-03T17:02:14Z",
+  "updated_at": "2026-09-04T16:51:27Z",
   "monitor_status": "attention",
   "policy": "Monitoring detects possible source changes only. Published project facts require human review before update.",
   "summary": {
@@ -20,7 +20,7 @@
       "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-09-03T17:02:13Z",
+      "last_checked_at": "2026-09-04T16:51:25Z",
       "last_change_detected_at": "2026-09-02T17:09:31Z",
       "baseline_initialized_at": "2026-09-01T17:19:05Z",
       "etag": null,
@@ -43,7 +43,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-03T17:02:13Z",
+      "last_checked_at": "2026-09-04T16:51:27Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -60,7 +60,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-03T17:02:14Z",
+      "last_checked_at": "2026-09-04T16:51:27Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -77,7 +77,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-03T17:02:14Z",
+      "last_checked_at": "2026-09-04T16:51:27Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -88,11 +88,11 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-09-03T17:02:14Z",
+      "last_checked_at": "2026-09-04T16:51:27Z",
       "last_change_detected_at": null,
       "baseline_initialized_at": "2026-09-01T17:19:07Z",
       "etag": null,
-      "last_modified": "Thu, 03 Sep 2026 06:58:17 GMT",
+      "last_modified": "Fri, 04 Sep 2026 16:51:27 GMT",
       "content_sha256": "8dc13b6536935707d8fcddf7b199474cabbe012693c9b6a9509267084c123580",
       "normalized_text_length": 13814,
       "error": null
