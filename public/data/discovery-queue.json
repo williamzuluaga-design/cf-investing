@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-08T18:02:25Z",
+  "updated_at": "2026-09-15T18:25:52Z",
   "status": "active",
   "policy": "Candidates are discovery signals only and require human review before publication.",
   "source_runs": [
@@ -9,9 +9,9 @@
       "enabled": true,
       "connector": "idbinvest_xml",
       "status": "ok",
-      "checked_at": "2026-09-08T18:02:25Z",
+      "checked_at": "2026-09-15T18:25:52Z",
       "candidate_count": 0,
-      "records_scanned": 4777,
+      "records_scanned": 4788,
       "structured": true,
       "eligible_records": 0,
       "endpoint": "https://idbinvest.org/en/projects.xml",
@@ -23,7 +23,7 @@
       "enabled": true,
       "connector": "caf_catalog",
       "status": "error",
-      "checked_at": "2026-09-08T18:02:25Z",
+      "checked_at": "2026-09-15T18:25:52Z",
       "candidate_count": 0,
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
@@ -32,7 +32,7 @@
       "enabled": true,
       "connector": "bancoldex_catalog",
       "status": "ok",
-      "checked_at": "2026-09-08T18:02:25Z",
+      "checked_at": "2026-09-15T18:25:52Z",
       "candidate_count": 7,
       "records_scanned": 543,
       "structured": true,
@@ -70,7 +70,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/lineas-de-credito/circular-unica-aplicable-usuarios-de-recursos-del-banco",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
@@ -86,7 +86,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/lineas-de-credito/circular-unica-tasa-de-referencia-term-sofr",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
@@ -102,7 +102,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/comex-0",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
@@ -118,7 +118,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-creo-un-credito-para-conocernos",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
@@ -134,7 +134,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-impulso-la-productividad",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
@@ -150,7 +150,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-pulso",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
@@ -166,7 +166,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/lineas-de-credito/programa-de-alivio-financiero-economia-naranja",
       "metadata": {},
       "first_seen": "2026-09-01T17:55:32Z",
-      "last_seen": "2026-09-08T18:02:25Z",
+      "last_seen": "2026-09-15T18:25:52Z",
       "currently_listed": true,
       "review_status": "pending_review",
       "review_notes": ""
