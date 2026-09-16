@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-15T17:39:40Z",
+  "updated_at": "2026-09-16T17:37:06Z",
   "monitor_status": "attention",
   "policy": "Monitoring detects possible source changes only. Published project facts require human review before update.",
   "summary": {
     "sources": 5,
     "healthy": 2,
-    "changed_last_run": 0,
+    "changed_last_run": 1,
     "errors": 3,
     "pending_baseline": 0,
     "baselines_initialized_last_run": 0
@@ -18,15 +18,15 @@
       "name": "Wimke Solar Photovoltaic Project",
       "source_name": "BID Invest",
       "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
-      "status": "unchanged",
+      "status": "changed",
       "http_status": 200,
-      "last_checked_at": "2026-09-15T17:39:38Z",
-      "last_change_detected_at": "2026-09-02T17:09:31Z",
+      "last_checked_at": "2026-09-16T17:37:05Z",
+      "last_change_detected_at": "2026-09-16T17:37:05Z",
       "baseline_initialized_at": "2026-09-01T17:19:05Z",
       "etag": null,
       "last_modified": null,
-      "content_sha256": "d3569f379484ba1579e2c7149dcbd62af667746e2bae2366f698c585f4b3316b",
-      "normalized_text_length": 9259,
+      "content_sha256": "be2df19aa337163b11890b617016193cc681af096b282788e4bd7bee5a6750e1",
+      "normalized_text_length": 10322,
       "error": null
     },
     {
@@ -43,7 +43,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-15T17:39:40Z",
+      "last_checked_at": "2026-09-16T17:37:06Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -60,7 +60,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-15T17:39:40Z",
+      "last_checked_at": "2026-09-16T17:37:06Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -77,7 +77,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-15T17:39:40Z",
+      "last_checked_at": "2026-09-16T17:37:06Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -88,7 +88,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-09-15T17:39:40Z",
+      "last_checked_at": "2026-09-16T17:37:06Z",
       "last_change_detected_at": null,
       "baseline_initialized_at": "2026-09-01T17:19:07Z",
       "etag": null,
@@ -98,5 +98,14 @@
       "error": null
     }
   ],
-  "last_run_changes": []
+  "last_run_changes": [
+    {
+      "id": "wimke-solar-source",
+      "record_id": "wimke-solar",
+      "name": "Wimke Solar Photovoltaic Project",
+      "source_name": "BID Invest",
+      "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
+      "detected_at": "2026-09-16T17:37:05Z"
+    }
+  ]
 }
