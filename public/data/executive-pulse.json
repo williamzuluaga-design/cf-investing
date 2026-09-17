@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "updated_at": "2026-09-02",
-  "review_by": "2026-09-15",
+  "review_by": "2026-09-17",
   "status": "active",
   "policy": "Curated executive signals. Facts are linked to primary or source-reviewed records; implications are CF Investing analytical interpretation, not investment advice.",
   "automation": "Semi-automatic: reviewed market/event inputs + latest source-reviewed Project Intelligence capital case.",
@@ -56,16 +56,12 @@
       "label_es": "Radar de eventos",
       "headline_en": "The next dates can reset the decision cycle",
       "headline_es": "Las próximas fechas pueden redefinir el ciclo de decisión",
-      "metric_en": "Fed 15–16 Sep · BanRep 30 Sep · Wimke 6 Oct",
-      "metric_es": "Fed 15–16 sep · BanRep 30 sep · Wimke 6 oct",
+      "metric_en": "BanRep 30 Sep · Wimke 6 Oct",
+      "metric_es": "BanRep 30 sep · Wimke 6 oct",
       "why_en": "These reviewed dates can change rate expectations or documented project decision timelines, so they belong on the executive watchlist.",
       "why_es": "Estas fechas revisadas pueden cambiar expectativas de tasas o cronogramas documentados de decisión de proyectos, por lo que deben estar en el radar ejecutivo.",
       "source_status": "Primary sources + Source Reviewed",
       "sources": [
-        {
-          "name": "Federal Reserve FOMC calendar",
-          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-        },
         {
           "name": "Banco de la República",
           "url": "https://www.banrep.gov.co/es/noticias/calendario-actividades-junta-directiva/reunion-septiembre-2026"
