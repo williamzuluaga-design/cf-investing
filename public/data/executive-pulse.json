@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "updated_at": "2026-09-02",
   "review_by": "2026-09-17",
-  "status": "active",
+  "status": "review_required",
   "policy": "Curated executive signals. Facts are linked to primary or source-reviewed records; implications are CF Investing analytical interpretation, not investment advice.",
   "automation": "Semi-automatic: reviewed market/event inputs + latest source-reviewed Project Intelligence capital case.",
   "signals": [
@@ -17,7 +17,7 @@
       "metric_es": "Colombia 12% · Fed 3,50–3,75%",
       "why_en": "The policy-rate gap keeps financing costs, discount rates and FX sensitivity central to corporate planning.",
       "why_es": "La brecha de tasas mantiene el costo de financiación, las tasas de descuento y la sensibilidad cambiaria en el centro de la planeación corporativa.",
-      "source_status": "Primary sources",
+      "source_status": "Review required · Primary sources",
       "sources": [
         {
           "name": "Banco de la República",
