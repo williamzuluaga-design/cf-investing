@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-19T16:28:24Z",
+  "updated_at": "2026-09-20T16:47:10Z",
   "monitor_status": "attention",
   "policy": "Monitoring detects possible source changes only. Published project facts require human review before update.",
   "summary": {
@@ -20,7 +20,7 @@
       "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-09-19T16:28:20Z",
+      "last_checked_at": "2026-09-20T16:47:09Z",
       "last_change_detected_at": "2026-09-17T17:37:07Z",
       "baseline_initialized_at": "2026-09-01T17:19:05Z",
       "etag": null,
@@ -43,7 +43,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-19T16:28:21Z",
+      "last_checked_at": "2026-09-20T16:47:10Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -60,7 +60,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-19T16:28:21Z",
+      "last_checked_at": "2026-09-20T16:47:10Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -77,7 +77,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-09-19T16:28:21Z",
+      "last_checked_at": "2026-09-20T16:47:10Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -88,7 +88,7 @@
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-09-19T16:28:24Z",
+      "last_checked_at": "2026-09-20T16:47:10Z",
       "last_change_detected_at": null,
       "baseline_initialized_at": "2026-09-01T17:19:07Z",
       "etag": null,
