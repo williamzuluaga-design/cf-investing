@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-06T18:53:45Z",
+  "updated_at": "2026-10-07T19:19:23Z",
   "monitor_status": "attention",
   "policy": "Monitoring detects possible source changes only. Published project facts require human review before update.",
   "summary": {
     "sources": 5,
     "healthy": 2,
-    "changed_last_run": 1,
+    "changed_last_run": 0,
     "errors": 3,
     "pending_baseline": 0,
     "baselines_initialized_last_run": 0
@@ -20,7 +20,7 @@
       "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-10-06T18:53:44Z",
+      "last_checked_at": "2026-10-07T19:19:17Z",
       "last_change_detected_at": "2026-09-17T17:37:07Z",
       "baseline_initialized_at": "2026-09-01T17:19:05Z",
       "etag": null,
@@ -43,7 +43,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-10-06T18:53:45Z",
+      "last_checked_at": "2026-10-07T19:19:18Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -60,7 +60,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-10-06T18:53:45Z",
+      "last_checked_at": "2026-10-07T19:19:18Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -77,7 +77,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-10-06T18:53:45Z",
+      "last_checked_at": "2026-10-07T19:19:18Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
@@ -86,26 +86,17 @@
       "name": "Minería que Transforma 2026",
       "source_name": "Bancóldex",
       "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026",
-      "status": "changed",
+      "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-10-06T18:53:45Z",
+      "last_checked_at": "2026-10-07T19:19:18Z",
       "last_change_detected_at": "2026-10-06T18:53:45Z",
       "baseline_initialized_at": "2026-09-01T17:19:07Z",
       "etag": null,
-      "last_modified": "Mon, 05 Oct 2026 23:36:52 GMT",
+      "last_modified": "Wed, 07 Oct 2026 16:22:24 GMT",
       "content_sha256": "ca7c935e16131dc02aa0bda1574d092c730c94f1a1fef661dd11f0086dda9e56",
       "normalized_text_length": 13834,
       "error": null
     }
   ],
-  "last_run_changes": [
-    {
-      "id": "mineria-transforma-source",
-      "record_id": "mineria-transforma-2026",
-      "name": "Minería que Transforma 2026",
-      "source_name": "Bancóldex",
-      "url": "https://www.bancoldex.com/credito-traves-de-aliados/linea-de-credito-mineria-que-transforma-2026",
-      "detected_at": "2026-10-06T18:53:45Z"
-    }
-  ]
+  "last_run_changes": []
 }
