@@ -50,24 +50,18 @@
       ]
     },
     {
-      "id": "events-next-reviewed",
+      "id": "events-review-required",
       "type": "events",
       "label_en": "Events radar",
       "label_es": "Radar de eventos",
-      "headline_en": "The next dates can reset the decision cycle",
-      "headline_es": "Las próximas fechas pueden redefinir el ciclo de decisión",
-      "metric_en": "Wimke 6 Oct",
-      "metric_es": "Wimke 6 oct",
-      "why_en": "These reviewed dates can change rate expectations or documented project decision timelines, so they belong on the executive watchlist.",
-      "why_es": "Estas fechas revisadas pueden cambiar expectativas de tasas o cronogramas documentados de decisión de proyectos, por lo que deben estar en el radar ejecutivo.",
-      "source_status": "Primary sources + Source Reviewed",
-      "sources": [
-        {
-          "name": "CF Investing Wimke Solar Photovoltaic Project profile",
-          "url_en": "/projects/wimke-solar/",
-          "url_es": "/es/proyectos/wimke-solar/"
-        }
-      ]
+      "headline_en": "Event calendar requires review",
+      "headline_es": "El calendario de eventos requiere revisión",
+      "metric_en": "No future reviewed events",
+      "metric_es": "No hay eventos futuros revisados",
+      "why_en": "Add the next decision-relevant official dates before publishing a new executive event signal.",
+      "why_es": "Agrega las próximas fechas oficiales relevantes para decisiones antes de publicar una nueva señal ejecutiva.",
+      "source_status": "Review required",
+      "sources": []
     }
   ]
 }
