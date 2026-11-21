@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-20T21:03:10Z",
+  "updated_at": "2026-11-21T20:03:53Z",
   "monitor_status": "attention",
   "policy": "Monitoring detects possible source changes only. Published project facts require human review before update.",
   "summary": {
@@ -20,7 +20,7 @@
       "url": "https://idbinvest.org/es/proyectos/parque-solar-fotovoltaico-wimke-sas",
       "status": "unchanged",
       "http_status": 200,
-      "last_checked_at": "2026-11-20T21:03:08Z",
+      "last_checked_at": "2026-11-21T20:03:52Z",
       "last_change_detected_at": "2026-11-06T19:56:21Z",
       "baseline_initialized_at": "2026-09-01T17:19:05Z",
       "etag": null,
@@ -43,7 +43,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-11-20T21:03:09Z",
+      "last_checked_at": "2026-11-21T20:03:53Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     },
     {
@@ -60,7 +60,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-11-20T21:03:09Z",
+      "last_checked_at": "2026-11-21T20:03:53Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     },
     {
@@ -77,7 +77,7 @@
       "normalized_text_length": null,
       "status": "error",
       "http_status": null,
-      "last_checked_at": "2026-11-20T21:03:09Z",
+      "last_checked_at": "2026-11-21T20:03:53Z",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     },
     {
@@ -94,7 +94,7 @@
       "normalized_text_length": 13834,
       "status": "error",
       "http_status": 403,
-      "last_checked_at": "2026-11-20T21:03:09Z",
+      "last_checked_at": "2026-11-21T20:03:53Z",
       "error": "HTTP 403: Forbidden"
     }
   ],
